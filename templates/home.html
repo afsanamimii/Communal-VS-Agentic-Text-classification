@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Communal Vs Agentic</title>
+</head>
+<body>
+
+
+
+	<form method="POST">
+		<input type="text" name="para" placeholder="Enter your text"/>
+
+		<input type="submit" value="Submit">
+
+	</form>
+
+	<p>
+		<br>
+		<br>
+		
+
+		{% if prediction_text %}
+		predicted class: {{prediction_text}}
+		<br>
+		{% endif %}
+        
+
+        
+		Probability:{{conf}}
+		<br>
+		
+
+
+       {% if highlight %}
+		highlighted phrases: 
+		 {% for each in highlight %}
+          {{ each }}
+           {% endfor %}
+
+        {% endif %}
+
+		
+
+
+		
+
+
+
+	</p>
+</body>
+</html>
